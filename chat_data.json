@@ -1,0 +1,432 @@
+{
+    "chats": {
+        "chat-0": {
+            "nombre": "chat-0",
+            "mensajes": [
+                {
+                    "autor": "Tú",
+                    "texto": "Qué me dices del capitulo 3 del RETIE?",
+                    "needs_response": true,
+                    "modelo": "llama3.1",
+                    "proceso": "general"
+                },
+                {
+                    "autor": "Tú",
+                    "texto": "Qué me dices del capitulo 3 del RETIE?",
+                    "needs_response": true,
+                    "modelo": "llama3.2",
+                    "proceso": "general"
+                }
+            ],
+            "files": []
+        },
+        "chat-1": {
+            "nombre": "chat-1",
+            "mensajes": [
+                {
+                    "autor": "Tú",
+                    "texto": "Genérame un gráfico en el que me muestre la cantidad de interrupciones en cada departamento por año",
+                    "needs_response": false,
+                    "modelo": "gpt",
+                    "proceso": "general"
+                },
+                {
+                    "autor": "Asistente",
+                    "imagen": "plots/chat-1/output_0.jpg",
+                    "texto": "¿Hay algo más en lo que te pueda ayudar?"
+                },
+                {
+                    "autor": "Tú",
+                    "texto": "Genérame un gráfico en el que me muestre la cantidad de interrupciones en cada departamento por año",
+                    "needs_response": false,
+                    "modelo": "gpt",
+                    "proceso": "generate_plots"
+                },
+                {
+                    "autor": "Asistente",
+                    "imagen": "plots/chat-1/output_1.jpg",
+                    "texto": "¿Hay algo más en lo que te pueda ayudar?"
+                }
+            ],
+            "files": []
+        },
+        "chat-2": {
+            "nombre": "chat-2",
+            "mensajes": [
+                {
+                    "autor": "Tú",
+                    "texto": "¿Qué me puedes decir del capítulo 3 del RETIE?",
+                    "needs_response": true,
+                    "modelo": "llama3.2",
+                    "proceso": "general"
+                }
+            ],
+            "files": []
+        },
+        "chat-3": {
+            "nombre": "chat-3",
+            "mensajes": [
+                {
+                    "autor": "Tú",
+                    "texto": "¿Qué me puedes decir del capítulo 3 del RETIE?",
+                    "needs_response": false,
+                    "modelo": "llama3.2",
+                    "proceso": "general"
+                },
+                {
+                    "autor": "Asistente",
+                    "texto": "El capítulo 3 del Reglamento Técnico de Instalaciones Eléctricas - RETIE, titulado \"Instalaciones de Iluminación\", se refiere a los aspectos generales para la instalación y operación de sistemas de iluminación. En este capítulo, se establecen las normas y requisitos para garantizar la seguridad y eficiencia en la instalación y uso de sistemas de luz.\n\nEntre los puntos clave que mencionan el texto proporcionado, algunos de los más relevantes son:\n\n1. **Aspectos generales**: El capítulo comienza destacando la importancia de considerar aspectos generales para garantizar la seguridad y eficiencia en la instalación y uso de sistemas de luz.\n2. **Requisitos específicos**: Se mencionan varios requisitos específicos, como la elección del material adecuado para el sistema de iluminación, la configuración de los cables eléctricos, la instalación de dispositivos de protección contra rayos y la selección de sistemas de iluminación seguros.\n3. **Seguridad**: El capítulo enfatiza la importancia de priorizar la seguridad en la instalación y uso de sistemas de luz, incluyendo la elección de zonas seguras para la instalación y el manejo adecuado de equipos eléctricos.\n\nEn resumen, el capítulo 3 del RETIE proporciona información fundamental sobre los aspectos generales para la instalación y operación de sistemas de iluminación, enfatizando la importancia de priorizar la seguridad en este proceso."
+                },
+                {
+                    "autor": "Tú",
+                    "texto": "Genérame un gráfico de la cantidad de interrupciones en cada departamento",
+                    "needs_response": false,
+                    "modelo": "gpt",
+                    "proceso": "general"
+                },
+                {
+                    "autor": "Asistente",
+                    "imagen": "plots/chat-3/output_0.jpg",
+                    "texto": "¿Hay algo más en lo que te pueda ayudar?"
+                },
+                {
+                    "autor": "Tú",
+                    "texto": "¿Qué me puedes decir del capítulo 3 del RETIE?",
+                    "needs_response": false,
+                    "modelo": "gpt",
+                    "proceso": "general"
+                },
+                {
+                    "autor": "Asistente",
+                    "texto": "El capítulo 3 del Reglamento Técnico de Instalaciones Eléctricas - RETIE aborda las instalaciones eléctricas en general, estableciendo los requerimientos generales, competencias y responsabilidades de las personas involucradas, el diseño de las instalaciones, los espacios para el montaje de equipos, el código de colores para conductores, la operación y mantenimiento de las instalaciones, el cumplimiento de normativas ambientales, las protecciones de las instalaciones, la clasificación de los niveles de tensión, las distancias de seguridad, los campos electromagnéticos, el sistema de puesta a tierra, la protección contra rayos y sobretensiones transitorias, entre otros aspectos. Es fundamental cumplir con las normativas establecidas en este capítulo para garantizar la seguridad y eficiencia de las instalaciones eléctricas."
+                }
+            ],
+            "files": [
+                {
+                    "filename": "Resolucion 0389.pdf",
+                    "filepath": "Unstructured_Files/capitulo_3_4f307f3c-549f-4545-818a-6b780177afab.pdf",
+                    "proceso": "capitulo_3"
+                }
+            ]
+        },
+        "chat-4": {
+            "nombre": "chat-4",
+            "mensajes": [
+                {
+                    "autor": "Tú",
+                    "texto": "Genera una gráfica de los circuitos con más fallas en el 2023",
+                    "needs_response": false,
+                    "modelo": "gpt",
+                    "proceso": "general"
+                },
+                {
+                    "autor": "Asistente",
+                    "imagen": "plots/chat-4/output_0.jpg",
+                    "texto": "¿Hay algo más en lo que te pueda ayudar?"
+                },
+                {
+                    "autor": "Tú",
+                    "texto": "Genera una gráfica de los circuitos con más fallas en el 2023",
+                    "needs_response": false,
+                    "modelo": "gpt",
+                    "proceso": "general"
+                },
+                {
+                    "autor": "Asistente",
+                    "imagen": "plots/chat-4/output_1.jpg",
+                    "texto": "¿Hay algo más en lo que te pueda ayudar?"
+                },
+                {
+                    "autor": "Tú",
+                    "texto": "Dame un resumen de la Resolución 40117",
+                    "needs_response": false,
+                    "modelo": "gpt",
+                    "proceso": "resolucion_40117"
+                },
+                {
+                    "autor": "Asistente",
+                    "texto": "La Resolución 40117 modifica el Reglamento Técnico de Instalaciones Eléctricas (RETIE) con el objetivo de garantizar la seguridad nacional, la protección del medio ambiente y la prevención de prácticas que puedan inducir a error a los consumidores. Se establecen normas para el uso racional y eficiente de la energía, así como para la integración de energías renovables no convencionales al Sistema Energético Nacional. Se ajustan los requisitos para la certificación de conformidad de productos y se establece un proceso de actualización de certificados de competencias para inspectores y organismos evaluadores de la conformidad. La Resolución entra en vigencia a partir de su publicación en el Diario Oficial y deroga disposiciones anteriores que le sean contrarias."
+                }
+            ],
+            "files": []
+        },
+        "chat-5": {
+            "nombre": "chat-5",
+            "mensajes": [
+                {
+                    "autor": "Tú",
+                    "texto": "¿Qué me puedes decir de la normativa técnica para el diseño estructural de apoyos?",
+                    "needs_response": false,
+                    "modelo": "gpt",
+                    "proceso": "general"
+                },
+                {
+                    "autor": "Asistente",
+                    "texto": "La normativa técnica para el diseño de estructuras de soporte en redes eléctricas, conforme al RETIE, establece requisitos específicos para garantizar la seguridad y estabilidad estructural de las mismas. Entre los aspectos más relevantes se encuentran la resistencia a la rotura, los materiales especiales y su aplicación en áreas de difícil acceso, la utilización de postes en zonas rurales de baja circulación, las prohibiciones y criterios de seguridad, la altura e interdistancias para alumbrado público, y la ubicación y conexión a tierra de los postes. Además, normativas como la NTC 1329, NTC 776, NTC 1056, NTC 2050, NTC 2616, NTC 6183, NTC 1920, NTC 422, y la norma ISO 9223 establecen requisitos específicos para postes de concreto, madera, metal, plástico reforzado con fibra de vidrio, acero al carbono, entre otros materiales, garantizando su resistencia mecánica, durabilidad, protección anticorrosiva, y seguridad en su uso en redes de distribución eléctrica."
+                },
+                {
+                    "autor": "Tú",
+                    "texto": "¿Qué me puedes decir de la normativa de protecciones en redes eléctrica de tensión de nivel 2?",
+                    "needs_response": false,
+                    "modelo": "gpt",
+                    "proceso": "general"
+                },
+                {
+                    "autor": "Asistente",
+                    "texto": "La normativa de protecciones en redes eléctricas de nivel de tensión 2 establece los requisitos técnicos específicos para garantizar una protección eficaz contra sobrecargas y cortocircuitos, preservando la continuidad del servicio eléctrico. Según la norma NTC 2797, los cálculos para la coordinación de protecciones deben realizarse considerando la corriente de cortocircuito suministrada por el operador de red para el punto de conexión. Todas las líneas de distribución deben contar con protecciones contra sobrevoltaje y sobrecorriente, como DPS y fusibles, coordinados técnicamente. Los transformadores de 34,5 kV deben ser protegidos por fusibles tipo K y cortacircuitos para 38 kV con capacidad permanente de 100 Amperios, mientras que los transformadores de 13,2 kV requieren fusibles tipo K y cortacircuitos para 15 kV con la misma capacidad. Los fusibles de respaldo en alimentadores y ramales deben ser tipo T. Además, se establecen capacidades específicas para los fusibles de transformadores bifásicos y trifásicos en 13,2 kV. En cuanto a los DPS, deben cumplir con las normas IEC 61643-1, IEC 61643-12, IEC 60099-1, UL 1449, IEEE C62.41-1, IEEE C62.41-2, e IEEE C62.45, y deben adoptar las disposiciones de puesta a tierra establecidas en el RETIE artículo 15. Los DPS deben conectarse sólidamente a la carcasa del transformador. En resumen, la normativa de protecciones en redes eléctricas de nivel de tensión 2 garantiza la seguridad y estabilidad operativa del sistema eléctrico mediante la correcta coordinación y selección de dispositivos de protección."
+                }
+            ],
+            "files": []
+        },
+        "chat-6": {
+            "nombre": "chat-6",
+            "mensajes": [
+                {
+                    "autor": "Tú",
+                    "texto": "¿Qué me puedes decir de la normativa técnica para el diseño estructural de apoyos?",
+                    "needs_response": false,
+                    "modelo": "gpt",
+                    "proceso": "normativa_apoyos"
+                },
+                {
+                    "autor": "Asistente",
+                    "texto": "La normativa técnica para el diseño de estructuras de soporte en redes eléctricas, como postes y apoyos, se encuentra regulada por el Reglamento Técnico de Instalaciones Eléctricas (RETIE) en Colombia. Esta normativa establece requisitos específicos para garantizar la seguridad y estabilidad estructural de las instalaciones eléctricas. Algunos aspectos importantes que se deben tener en cuenta son la resistencia a la rotura de las estructuras, el uso de materiales especiales en áreas de difícil acceso, la prohibición de ciertos materiales para soportar transformadores, la ubicación y conexión a tierra de los postes, entre otros. Además, existen normas técnicas complementarias como la NTC 1329, NTC 776, NTC 1056, NTC 2050, NTC 2616, NTC 6183, NTC 1920 y NTC 422, que establecen requisitos específicos para postes de concreto, madera, metal y otros materiales utilizados en redes de distribución eléctrica. Estas normas garantizan la resistencia mecánica, durabilidad y estabilidad estructural de los postes y apoyos en diferentes condiciones ambientales y de carga."
+                },
+                {
+                    "autor": "Tú",
+                    "texto": "¿Qué me puedes decir de la normativa de protecciones para redes eléctricas de tensión de nivel 2?",
+                    "needs_response": false,
+                    "modelo": "gpt",
+                    "proceso": "normativa_protecciones"
+                },
+                {
+                    "autor": "Asistente",
+                    "texto": "La normativa de protecciones para redes eléctricas de nivel de tensión 2 incluye varias normas internacionales y locales que establecen los requisitos técnicos para garantizar la seguridad y confiabilidad de las instalaciones eléctricas. Algunas de las normas relevantes son la IEC 61643-1, IEC 61643-12, IEC 60099-1, UL 1449, IEEE C62.41-1, IEEE C62.41-2, e IEEE C62.45. Estas normas abordan aspectos como la protección contra sobretensiones, la coordinación de protecciones, la selección y coordinación de fusibles, la instalación de dispositivos de protección contra sobretensiones (SPD), entre otros.\n\nEn cuanto a la protección contra sobretensiones, la norma UL 1449 establece los requisitos técnicos para los Dispositivos de Protección contra Sobretensiones (SPD), definiendo rangos de voltaje nominal, corriente de impulso, límites de tensión residual, resistencia a temperaturas extremas y sobrecorrientes, entre otros aspectos. Por otro lado, la norma IEC 61643-1 regula los Dispositivos de Protección contra Sobretensiones (DPS) en sistemas de baja tensión, especificando capacidades de descarga, rangos de voltaje de operación continua, límites de tensión residual, pruebas térmicas, entre otros.\n\nAdemás, la normativa también aborda la coordinación de protecciones, donde se establecen los cálculos necesarios conforme a la norma NTC 2797, considerando la corriente de cortocircuito suministrada por el operador de red, la protección contra sobrevoltaje y sobrecorriente, y la selección de fusibles y DPS coordinados técnicamente.\n\nEn resumen, la normativa de protecciones para redes eléctricas de nivel de tensión 2 garantiza la seguridad, confiabilidad y eficiencia de las instalaciones eléctricas mediante la aplicación de estándares técnicos y prácticas recomendadas en la selección, instalación y coordinación de dispositivos de protección."
+                }
+            ],
+            "files": []
+        },
+        "chat-7": {
+            "nombre": "chat-7",
+            "mensajes": [
+                {
+                    "autor": "Tú",
+                    "texto": "Genérame una gráfica con la marca de transformadores con más fallas en el año 2023",
+                    "needs_response": true,
+                    "modelo": "gpt",
+                    "proceso": "generate_plots"
+                },
+                {
+                    "autor": "Tú",
+                    "texto": "Genérame una gráfica con la marca de transformadores con más fallas en el año 2023",
+                    "needs_response": false,
+                    "modelo": "gpt",
+                    "proceso": "general"
+                },
+                {
+                    "autor": "Asistente",
+                    "imagen": "plots/chat-7/output_1.jpg",
+                    "texto": "¿Hay algo más en lo que te pueda ayudar?"
+                },
+                {
+                    "autor": "Tú",
+                    "texto": "Dime algo de los productos objeto RETIE",
+                    "needs_response": false,
+                    "modelo": "gpt",
+                    "proceso": "general"
+                },
+                {
+                    "autor": "Asistente",
+                    "texto": "Los productos objeto del Reglamento Técnico de Instalaciones Eléctricas - RETIE son aquellos de mayor utilización en sistemas e instalaciones eléctricas, los cuales deben cumplir con requisitos y ensayos mínimos para garantizar su calidad, desempeño y seguridad. Estos productos incluyen aerogeneradores eléctricos de más de 25 V en c.a o más de 50 V en c.c, aisladores eléctricos de vidrio, cerámica y otros materiales para tensiones superiores a 100 V, arrancadores directos, baterías o acumuladores de carga eléctrica para diversos usos, cables y conductores de cobre, aluminio y acero, cajas y conduletas metálicas y no metálicas, entre otros.\n\nPara certificar la conformidad de estos productos, se requiere un Certificado de Conformidad de Producto expedido por un organismo de certificación acreditado. Además, la información relacionada con marcaciones o rotulados debe estar en idioma castellano y ser verificada durante el proceso de certificación. Los productores deben estar registrados en el Registro de Productores e Importadores y Prestadores de Servicios, y deben cumplir con los Reglamentos técnicos de la Superintendencia de Industria y Comercio (SIC).\n\nEs importante señalar que los productos que no cumplan con los requisitos del RETIE no deben llevar la sigla RETIE en su etiquetado, ya que esto podría inducir a error al consumidor y ser sancionado por la SIC. Además, los productores deben indicar claramente las aplicaciones o limitaciones de uso de los productos, y cualquier daño causado por un uso contrario a las indicaciones del productor será responsabilidad del instalador o usuario del producto."
+                }
+            ],
+            "files": []
+        },
+        "chat-8": {
+            "nombre": "chat-8",
+            "mensajes": [
+                {
+                    "autor": "Tú",
+                    "texto": "Genérame un gráfico de los transformadores con más fallas en el 2023 ",
+                    "needs_response": false,
+                    "modelo": "gpt",
+                    "proceso": "generate_plots"
+                },
+                {
+                    "autor": "Asistente",
+                    "imagen": "plots/chat-8/output_0.jpg",
+                    "texto": "¿Hay algo más en lo que te pueda ayudar?"
+                }
+            ],
+            "files": []
+        },
+        "chat-9": {
+            "nombre": "chat-9",
+            "mensajes": [
+                {
+                    "autor": "Tú",
+                    "texto": "¿Dame un resumen del capítulo 3 del RETIE?",
+                    "needs_response": false,
+                    "modelo": "gpt",
+                    "proceso": "general"
+                },
+                {
+                    "autor": "Asistente",
+                    "texto": "El capítulo 3 del RETIE se refiere a las instalaciones objeto del reglamento, abordando aspectos como los requerimientos generales de las instalaciones eléctricas, las competencias y responsabilidades de las personas que intervienen en estas instalaciones, el diseño de las mismas, los espacios para montaje de equipos y distancias mínimas de seguridad, el código de colores para conductores de uso eléctrico, la operación y mantenimiento de las instalaciones, el cumplimiento de normatividad ambiental, la protección de las instalaciones eléctricas, la clasificación de los niveles de tensión, las distancias de seguridad, los campos electromagnéticos, el sistema de puesta a tierra, la protección contra rayos y sobretensiones transitorias, entre otros aspectos relevantes para garantizar la seguridad y eficiencia de las redes eléctricas de nivel de tensión 2."
+                },
+                {
+                    "autor": "Tú",
+                    "texto": "Genérame un gráfico en el que me muestre la cantidad de interrupciones en cada departamento por año",
+                    "needs_response": false,
+                    "modelo": "gpt",
+                    "proceso": "general"
+                },
+                {
+                    "autor": "Asistente",
+                    "imagen": "plots/chat-9/output_0.jpg",
+                    "texto": "¿Hay algo más en lo que te pueda ayudar?"
+                }
+            ],
+            "files": []
+        },
+        "chat-10": {
+            "nombre": null,
+            "mensajes": [],
+            "files": []
+        },
+        "chat-11": {
+            "nombre": "chat-11",
+            "mensajes": [
+                {
+                    "autor": "Tú",
+                    "texto": "Dime cuántas interrupciones hubo en Risaralda en el año 2019",
+                    "needs_response": false,
+                    "modelo": "gpt",
+                    "proceso": "general"
+                },
+                {
+                    "autor": "Asistente",
+                    "texto": "Hubo un total de 7208 interrupciones en Risaralda durante el año 2019."
+                },
+                {
+                    "autor": "Tú",
+                    "texto": "Dime cuántas interrupciones hubo en Risaralda en el año 2019",
+                    "needs_response": false,
+                    "modelo": "gpt",
+                    "proceso": "interrrupciones_transformadores"
+                },
+                {
+                    "autor": "Asistente",
+                    "texto": "Hubo un total de 7208 interrupciones en Risaralda durante el año 2019."
+                },
+                {
+                    "autor": "Tú",
+                    "texto": "¿Qué me puedes decir de las NTC's en apoyos?",
+                    "needs_response": false,
+                    "modelo": "gpt",
+                    "proceso": "general"
+                },
+                {
+                    "autor": "Asistente",
+                    "texto": "Las Normas Técnicas Colombianas (NTC) regulan los aspectos técnicos y constructivos para el diseño de apoyos y postes eléctricos en redes de distribución y transmisión. Estas normativas buscan garantizar la seguridad, durabilidad y eficiencia de las estructuras empleadas en infraestructuras eléctricas, tanto en áreas urbanas como rurales, bajo diversas condiciones ambientales. Algunas de las NTC aplicables al diseño y uso de apoyos y postes eléctricos incluyen la NTC 1329, la NTC 2050, la NTC 2616, la NTC 6183, la NTC 1920 y la NTC 422, entre otras. Estas normas establecen requisitos específicos de resistencia mecánica, protección anticorrosiva, dimensiones y materiales para garantizar la integridad y estabilidad de las estructuras en redes eléctricas. Además, la norma ISO 9223 es fundamental para evaluar la corrosividad atmosférica y proteger adecuadamente las estructuras metálicas como postes y apoyos en redes de distribución eléctrica."
+                },
+                {
+                    "autor": "Tú",
+                    "texto": "¿Qué me puedes decir de las NTC's en protecciones?",
+                    "needs_response": false,
+                    "modelo": "gpt",
+                    "proceso": "general"
+                },
+                {
+                    "autor": "Asistente",
+                    "texto": "Las Normas Técnicas Colombianas (NTC) en protecciones establecen los requisitos técnicos específicos para la coordinación y funcionamiento de dispositivos de protección en redes eléctricas de nivel de tensión 2. Estas normativas, como la NTC 2797, definen los criterios para la selección y configuración de fusibles, DPS y cortacircuitos en transformadores y líneas de distribución. La NTC 2797 también establece los tiempos de actuación, capacidades de interrupción y coordinación de protecciones para garantizar la seguridad y continuidad del servicio eléctrico. Asimismo, otras normas como la NTC 2132 y la NTC 3285 especifican los requisitos para varillas de tierra y aisladores utilizados en sistemas de puesta a tierra y líneas de distribución de alta tensión, respectivamente. En resumen, las NTC en protecciones son fundamentales para asegurar la eficacia y fiabilidad de los dispositivos de protección en redes eléctricas de nivel de tensión 2."
+                }
+            ],
+            "files": []
+        },
+        "chat-12": {
+            "nombre": "chat-12",
+            "mensajes": [
+                {
+                    "autor": "Tú",
+                    "texto": "Qué me puedes decir de las normas RETIE?",
+                    "needs_response": false,
+                    "modelo": "gpt",
+                    "proceso": "general"
+                },
+                {
+                    "autor": "Asistente",
+                    "texto": "Las normas RETIE son un conjunto de reglamentos técnicos que establecen los requisitos de seguridad que deben cumplir las instalaciones eléctricas en Colombia. Estas normas tienen como objetivo garantizar la protección de las personas, la vida animal y vegetal, y la preservación del medio ambiente en relación con los riesgos de origen eléctrico. Además, buscan promover la adecuada utilización de equipos y productos eléctricos, fijando parámetros mínimos de calidad, desempeño y seguridad. \n\nSi deseas más información específica sobre los capítulos del RETIE o alguna normativa en particular, por favor indícame para poder brindarte detalles adicionales."
+                },
+                {
+                    "autor": "Tú",
+                    "texto": "Genera una gráfica de las marcas de transformadores con más fallas en el 2023",
+                    "needs_response": false,
+                    "modelo": "gpt",
+                    "proceso": "general"
+                },
+                {
+                    "autor": "Asistente",
+                    "imagen": "plots/chat-12/output_0.jpg",
+                    "texto": "¿Hay algo más en lo que te pueda ayudar?"
+                }
+            ],
+            "files": []
+        },
+        "chat-13": {
+            "nombre": null,
+            "mensajes": [],
+            "files": []
+        },
+        "chat-14": {
+            "nombre": null,
+            "mensajes": [],
+            "files": []
+        },
+        "chat-15": {
+            "nombre": null,
+            "mensajes": [],
+            "files": []
+        },
+        "chat-16": {
+            "nombre": null,
+            "mensajes": [],
+            "files": []
+        },
+        "chat-17": {
+            "nombre": null,
+            "mensajes": [],
+            "files": []
+        },
+        "chat-18": {
+            "nombre": "chat-18",
+            "mensajes": [
+                {
+                    "autor": "Tú",
+                    "texto": "Para el circuito RIO23L14 en el año 2024 cuál ha sido la principal causa de interrupción?",
+                    "needs_response": false,
+                    "modelo": "gpt",
+                    "proceso": "general"
+                },
+                {
+                    "autor": "Asistente",
+                    "texto": "La principal causa de interrupción para el circuito RIO23L14 en el año 2024 ha sido condiciones atmosféricas."
+                },
+                {
+                    "autor": "Tú",
+                    "texto": "Genérame un gráfico en el cual me muestres la cantidad de interrupciones por departamento y por tipo de equipo",
+                    "needs_response": false,
+                    "modelo": "gpt",
+                    "proceso": "general"
+                },
+                {
+                    "autor": "Asistente",
+                    "imagen": "plots/chat-18/output_0.jpg",
+                    "texto": "¿Hay algo más en lo que te pueda ayudar?"
+                }
+            ],
+            "files": []
+        }
+    },
+    "current_chat_id": "chat-18"
+}
