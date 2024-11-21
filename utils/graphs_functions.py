@@ -13,11 +13,11 @@ import matplotlib.pyplot as plt
 
 def load_data():
     
-    eventos_interruptor = pd.read_pickle('./data/Eventos_interruptor.pkl')
+    eventos_interruptor = pd.read_pickle("C:/Users/lucas/OneDrive - Universidad Nacional de Colombia/PC-GCPDS/Documentos/data/Eventos_interruptor.pkl")
 
-    eventos_tramo_linea = pd.read_pickle('./data/Eventos_tramo_linea.pkl')
+    eventos_tramo_linea = pd.read_pickle("C:/Users/lucas/OneDrive - Universidad Nacional de Colombia/PC-GCPDS/Documentos/data/Eventos_tramo_linea.pkl")
 
-    eventos_transformador = pd.read_pickle('./data/Eventos_transformador.pkl')
+    eventos_transformador = pd.read_pickle("C:/Users/lucas/OneDrive - Universidad Nacional de Colombia/PC-GCPDS/Documentos/data/Eventos_transfromador.pkl")
 
     return eventos_interruptor, eventos_tramo_linea, eventos_transformador
 

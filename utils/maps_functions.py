@@ -53,23 +53,23 @@ def select_data(año,mes,mun,trafos,apoyos,switches,redmt,eventos_interruptor, e
 
 def load_data():
 
-    trafos = pd.read_pickle('./data/TRAFOS.pkl')
+    trafos = pd.read_pickle("C:/Users/lucas/OneDrive - Universidad Nacional de Colombia/PC-GCPDS/Documentos/data/TRAFOS.pkl")
 
-    apoyos = pd.read_pickle('./data/APOYOS.pkl')
+    apoyos = pd.read_pickle("C:/Users/lucas/OneDrive - Universidad Nacional de Colombia/PC-GCPDS/Documentos/data/APOYOS.pkl")
 
-    redmt = pd.read_pickle('./data/REDMT.pkl')
+    redmt = pd.read_pickle("C:/Users/lucas/OneDrive - Universidad Nacional de Colombia/PC-GCPDS/Documentos/data/REDMT.pkl")
 
-    switches = pd.read_pickle('./data/SWITCHES.pkl')
+    switches = pd.read_pickle("C:/Users/lucas/OneDrive - Universidad Nacional de Colombia/PC-GCPDS/Documentos/data/SWITCHES.pkl")
 
-    eventos_interruptor = pd.read_pickle('./data/Eventos_interruptor.pkl')
+    eventos_interruptor = pd.read_pickle("C:/Users/lucas/OneDrive - Universidad Nacional de Colombia/PC-GCPDS/Documentos/data/Eventos_interruptor.pkl")
 
-    eventos_tramo_linea = pd.read_pickle('./data/Eventos_tramo_linea.pkl')
+    eventos_tramo_linea = pd.read_pickle("C:/Users/lucas/OneDrive - Universidad Nacional de Colombia/PC-GCPDS/Documentos/data/Eventos_tramo_linea.pkl")
 
-    eventos_transformador = pd.read_pickle('./data/Eventos_transformador.pkl')
+    eventos_transformador = pd.read_pickle("C:/Users/lucas/OneDrive - Universidad Nacional de Colombia/PC-GCPDS/Documentos/data/Eventos_transfromador.pkl")
 
-    descargas = pd.read_pickle('./data/Rayos.pkl')
+    descargas = pd.read_pickle("C:/Users/lucas/OneDrive - Universidad Nacional de Colombia/PC-GCPDS/Documentos/data/Rayos.pkl")
 
-    vegetacion = pd.read_pickle('./data/Vegetacion.pkl')
+    vegetacion = pd.read_pickle("C:/Users/lucas/OneDrive - Universidad Nacional de Colombia/PC-GCPDS/Documentos/data/Vegetacion.pkl")
 
     return trafos, apoyos, switches, redmt, eventos_interruptor, eventos_tramo_linea, eventos_transformador, descargas, vegetacion
 
