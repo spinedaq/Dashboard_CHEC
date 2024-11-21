@@ -1,6 +1,7 @@
 import math
 import folium
 import pandas as pd
+from datetime import datetime
 from folium.plugins import HeatMap
 
 def select_data(año,mes,mun,trafos,apoyos,switches,redmt,eventos_interruptor, eventos_tramo_linea, eventos_transformador, descargas, vegetacion):
@@ -87,7 +88,7 @@ def map_folium(trafos_seleccionado, apoyos_seleccionado, switches_seleccionado, 
             # Agregar un marcador con ícono de advertencia en rojo
             folium.Marker(
                 location=location,
-                popup=f"Evento \n Equipo opero: {row.equipo_ope} \n Tipo equipo: {row.tipo_equi_ope} \n Circuito opero: {row.cto_equi_ope} \n Tipo elemento: {row.tipo_elemento} \n Duracion: {row.duracion_h} \n Causa: {row.causa} \n Cantidad usuarios: {row.cnt_usus} \n SAIDI: {row.SAIDI} \n Fecha: {row.inicio}",
+                popup=f"Evento \n Equipo opero: {row.equipo_ope} \n Tipo equipo: {row.tipo_equi_ope} \n Circuito opero: {row.cto_equi_ope} \n Tipo elemento: {row.tipo_elemento} \n Duracion: {row.duracion_h:.4f} \n Causa: {row.causa} \n Cantidad usuarios: {row.cnt_usus} \n SAIDI: {row.SAIDI:.4f} \n Fecha: {row.inicio}",
                 icon=folium.Icon(icon="exclamation-triangle", prefix="fa", color="red")  # Ícono de advertencia rojo
             ).add_to(mapa)
 
@@ -96,7 +97,7 @@ def map_folium(trafos_seleccionado, apoyos_seleccionado, switches_seleccionado, 
             # Agregar un marcador con ícono de advertencia en rojo
             folium.Marker(
                 location=location,
-                popup=f"Evento \n Equipo opero: {row.equipo_ope} \n Tipo equipo: {row.tipo_equi_ope} \n Circuito opero: {row.cto_equi_ope} \n Tipo elemento: {row.tipo_elemento} \n Duracion: {row.duracion_h} \n Causa: {row.causa} \n Cantidad usuarios: {row.cnt_usus} \n SAIDI: {row.SAIDI} \n Fecha: {row.inicio}",
+                popup=f"Evento \n Equipo opero: {row.equipo_ope} \n Tipo equipo: {row.tipo_equi_ope} \n Circuito opero: {row.cto_equi_ope} \n Tipo elemento: {row.tipo_elemento} \n Duracion: {row.duracion_h:.4f} \n Causa: {row.causa} \n Cantidad usuarios: {row.cnt_usus} \n SAIDI: {row.SAIDI:.4f} \n Fecha: {row.inicio}",
                 icon=folium.Icon(icon="exclamation-triangle", prefix="fa", color="red")  # Ícono de advertencia rojo
             ).add_to(mapa)
 
@@ -105,7 +106,7 @@ def map_folium(trafos_seleccionado, apoyos_seleccionado, switches_seleccionado, 
             # Agregar un marcador con ícono de advertencia en rojo
             folium.Marker(
                 location=location,
-                popup=f"Evento \n Equipo opero: {row.equipo_ope} \n Tipo equipo: {row.tipo_equi_ope} \n Circuito opero: {row.cto_equi_ope} \n Tipo elemento: {row.tipo_elemento} \n Duracion: {row.duracion_h} \n Causa: {row.causa} \n Cantidad usuarios: {row.cnt_usus} \n SAIDI: {row.SAIDI} \n Fecha: {row.inicio}",
+                popup=f"Evento \n Equipo opero: {row.equipo_ope} \n Tipo equipo: {row.tipo_equi_ope} \n Circuito opero: {row.cto_equi_ope} \n Tipo elemento: {row.tipo_elemento} \n Duracion: {row.duracion_h:.4f} \n Causa: {row.causa} \n Cantidad usuarios: {row.cnt_usus} \n SAIDI: {row.SAIDI:.4f} \n Fecha: {row.inicio}",
                 icon=folium.Icon(icon="exclamation-triangle", prefix="fa", color="red")  # Ícono de advertencia rojo
             ).add_to(mapa)
 
@@ -125,6 +126,20 @@ def map_folium(trafos_seleccionado, apoyos_seleccionado, switches_seleccionado, 
 
         # Añadir la leyenda directamente al mapa
         mapa.get_root().html.add_child(folium.Element(legend_html))
+
+        for idx, row in redmt_seleccionado.iterrows(): 
+            # Dibujar los segmentos en el orden deseado
+            linea = folium.PolyLine(
+                locations=[(row.LATITUD,row.LONGITUD), (row.LATITUD2,row.LONGITUD2)],
+                color="black",
+                weight=1.5,
+                opacity=1
+            )
+            popup = folium.Popup(f"Tramo de linea \n Material conductor: {row.MATERIALCONDUCTOR} \n Tipo conductor: {row.TIPOCONDUCTOR} \n Largo: {row.LENGTH} \n Calibre conductor: {row.CALIBRECONDUCTOR} \n Guarda conductor:{row.GUARDACONDUCTOR} \n Neutro conductor:{row.NEUTROCONDUCTOR} \n Calibre neutro:{row.CALIBRENEUTRO} \n Capacidad: {row.CAPACITY} \n Resistencia: {row.RESISTANCE:.4f} \n Acometida conductor: {row.ACOMETIDACONDUCTOR}")
+            linea.add_child(popup)
+
+            # Añadir la polyline al mapa
+            linea.add_to(mapa)
 
         # Agregar los apoyos al mapa
         for idx, row in apoyos_seleccionado.iterrows():
@@ -151,7 +166,7 @@ def map_folium(trafos_seleccionado, apoyos_seleccionado, switches_seleccionado, 
                 fill=True,
                 fill_color='green',
                 fill_opacity=0.6,
-                popup=f"Trafo Fase: {row.PHASES} \n Propietario: {row.OWNER1} \n Impedancia: {row.IMPEDANCE} \n Marca: {row.MARCA} \n Fecha fabricacion: {row.DATE_FAB} \n Tipo subestación: {row.TIPO_SUB} \n KVA: {row.KVA} \n KV1: {row.KV1}"
+                popup=f"Trafo Fase: {row.PHASES} \n Propietario: {row.OWNER1} \n Impedancia: {row.IMPEDANCE} \n Marca: {row.MARCA} \n Fecha fabricacion: {row.DATE_FAB[:10]} \n Tipo subestación: {row.TIPO_SUB} \n KVA: {row.KVA} \n KV1: {row.KV1}"
             ).add_to(mapa)
 
         # Agregar los switches al mapa
@@ -167,20 +182,6 @@ def map_folium(trafos_seleccionado, apoyos_seleccionado, switches_seleccionado, 
                 fill_opacity=0.6,
                 popup=f"Switche Fase: {row.PHASES} \n Codigo assembly: {row.ASSEMBLY} \n KV: {row.KV} \n Estado: {row.STATE}"
             ).add_to(mapa)
-
-        for idx, row in redmt_seleccionado.iterrows(): 
-            # Dibujar los segmentos en el orden deseado
-            linea = folium.PolyLine(
-                locations=[(row.LATITUD,row.LONGITUD), (row.LATITUD2,row.LONGITUD2)],
-                color="black",
-                weight=1.5,
-                opacity=1
-            )
-            popup = folium.Popup(f"Tramo de linea \n Material conductor: {row.MATERIALCONDUCTOR} \n Tipo conductor: {row.TIPOCONDUCTOR} \n Largo: {row.LENGTH} \n Calibre conductor: {row.CALIBRECONDUCTOR} \n Guarda conductor:{row.GUARDACONDUCTOR} \n Neutro conductor:{row.NEUTROCONDUCTOR} \n Calibre neutro:{row.CALIBRENEUTRO} \n Capacidad: {row.CAPACITY} \n Resistencia: {row.RESISTANCE} \n Acometida conductor: {row.ACOMETIDACONDUCTOR}")
-            linea.add_child(popup)
-
-            # Añadir la polyline al mapa
-            linea.add_to(mapa)
         
         mapa_html = mapa._repr_html_()
 
@@ -230,6 +231,20 @@ def map_folium(trafos_seleccionado, apoyos_seleccionado, switches_seleccionado, 
         # Añadir la leyenda directamente al mapa
         mapa.get_root().html.add_child(folium.Element(legend_html))
 
+        for idx, row in redmt_seleccionado.iterrows(): 
+            # Dibujar los segmentos en el orden deseado
+            linea = folium.PolyLine(
+                locations=[(row.LATITUD,row.LONGITUD), (row.LATITUD2,row.LONGITUD2)],
+                color="black",
+                weight=1.5,
+                opacity=1
+            )
+            popup = folium.Popup(f"Tramo de linea \n Material conductor: {row.MATERIALCONDUCTOR} \n Tipo conductor: {row.TIPOCONDUCTOR} \n Largo: {row.LENGTH} \n Calibre conductor: {row.CALIBRECONDUCTOR} \n Guarda conductor:{row.GUARDACONDUCTOR} \n Neutro conductor:{row.NEUTROCONDUCTOR} \n Calibre neutro:{row.CALIBRENEUTRO} \n Capacidad: {row.CAPACITY} \n Resistencia: {row.RESISTANCE:.4f} \n Acometida conductor: {row.ACOMETIDACONDUCTOR}")
+            linea.add_child(popup)
+
+            # Añadir la polyline al mapa
+            linea.add_to(mapa)
+
        # Agregar los apoyos al mapa
         for idx, row in apoyos_seleccionado.iterrows():
             lat = row.LATITUD # Coordenadas en y
@@ -255,7 +270,7 @@ def map_folium(trafos_seleccionado, apoyos_seleccionado, switches_seleccionado, 
                 fill=True,
                 fill_color='green',
                 fill_opacity=0.6,
-                popup=f"Trafo Fase: {row.PHASES} \n Propietario: {row.OWNER1} \n Impedancia: {row.IMPEDANCE} \n Marca: {row.MARCA} \n Fecha fabricacion: {row.DATE_FAB} \n Tipo subestación: {row.TIPO_SUB} \n KVA: {row.KVA} \n KV1: {row.KV1}"
+                popup=f"Trafo Fase: {row.PHASES} \n Propietario: {row.OWNER1} \n Impedancia: {row.IMPEDANCE} \n Marca: {row.MARCA} \n Fecha fabricacion: {row.DATE_FAB[:10]} \n Tipo subestación: {row.TIPO_SUB} \n KVA: {row.KVA} \n KV1: {row.KV1}"
             ).add_to(mapa)
 
         # Agregar los switches al mapa
@@ -271,20 +286,6 @@ def map_folium(trafos_seleccionado, apoyos_seleccionado, switches_seleccionado, 
                 fill_opacity=0.6,
                 popup=f"Switche Fase: {row.PHASES} \n Codigo assembly: {row.ASSEMBLY} \n KV: {row.KV} \n Estado: {row.STATE}"
             ).add_to(mapa)
-
-        for idx, row in redmt_seleccionado.iterrows(): 
-            # Dibujar los segmentos en el orden deseado
-            linea = folium.PolyLine(
-                locations=[(row.LATITUD,row.LONGITUD), (row.LATITUD2,row.LONGITUD2)],
-                color="black",
-                weight=1.5,
-                opacity=1
-            )
-            popup = folium.Popup(f"Tramo de linea \n Material conductor: {row.MATERIALCONDUCTOR} \n Tipo conductor: {row.TIPOCONDUCTOR} \n Largo: {row.LENGTH} \n Calibre conductor: {row.CALIBRECONDUCTOR} \n Guarda conductor:{row.GUARDACONDUCTOR} \n Neutro conductor:{row.NEUTROCONDUCTOR} \n Calibre neutro:{row.CALIBRENEUTRO} \n Capacidad: {row.CAPACITY} \n Resistencia: {row.RESISTANCE} \n Acometida conductor: {row.ACOMETIDACONDUCTOR}")
-            linea.add_child(popup)
-
-            # Añadir la polyline al mapa
-            linea.add_to(mapa)
 
         mapa_html = mapa._repr_html_()
     
@@ -327,6 +328,20 @@ def map_folium(trafos_seleccionado, apoyos_seleccionado, switches_seleccionado, 
         # Añadir la leyenda directamente al mapa
         mapa.get_root().html.add_child(folium.Element(legend_html))
 
+        for idx, row in redmt_seleccionado.iterrows(): 
+            # Dibujar los segmentos en el orden deseado
+            linea = folium.PolyLine(
+                locations=[(row.LATITUD,row.LONGITUD), (row.LATITUD2,row.LONGITUD2)],
+                color="black",
+                weight=1.5,
+                opacity=1
+            )
+            popup = folium.Popup(f"Tramo de linea \n Material conductor: {row.MATERIALCONDUCTOR} \n Tipo conductor: {row.TIPOCONDUCTOR} \n Largo: {row.LENGTH} \n Calibre conductor: {row.CALIBRECONDUCTOR} \n Guarda conductor:{row.GUARDACONDUCTOR} \n Neutro conductor:{row.NEUTROCONDUCTOR} \n Calibre neutro:{row.CALIBRENEUTRO} \n Capacidad: {row.CAPACITY} \n Resistencia: {row.RESISTANCE:.4f} \n Acometida conductor: {row.ACOMETIDACONDUCTOR}")
+            linea.add_child(popup)
+
+            # Añadir la polyline al mapa
+            linea.add_to(mapa)
+
         # Agregar los apoyos al mapa
         for idx, row in apoyos_seleccionado.iterrows():
             lat = row.LATITUD # Coordenadas en y
@@ -352,7 +367,7 @@ def map_folium(trafos_seleccionado, apoyos_seleccionado, switches_seleccionado, 
                 fill=True,
                 fill_color='green',
                 fill_opacity=0.6,
-                popup=f"Trafo Fase: {row.PHASES} \n Propietario: {row.OWNER1} \n Impedancia: {row.IMPEDANCE} \n Marca: {row.MARCA} \n Fecha fabricacion: {row.DATE_FAB} \n Tipo subestación: {row.TIPO_SUB} \n KVA: {row.KVA} \n KV1: {row.KV1}"
+                popup=f"Trafo Fase: {row.PHASES} \n Propietario: {row.OWNER1} \n Impedancia: {row.IMPEDANCE} \n Marca: {row.MARCA} \n Fecha fabricacion: {row.DATE_FAB[:10]} \n Tipo subestación: {row.TIPO_SUB} \n KVA: {row.KVA} \n KV1: {row.KV1}"
             ).add_to(mapa)
 
         # Agregar los switches al mapa
@@ -368,20 +383,6 @@ def map_folium(trafos_seleccionado, apoyos_seleccionado, switches_seleccionado, 
                 fill_opacity=0.6,
                 popup=f"Switche Fase: {row.PHASES} \n Codigo assembly: {row.ASSEMBLY} \n KV: {row.KV} \n Estado: {row.STATE}"
             ).add_to(mapa)
-
-        for idx, row in redmt_seleccionado.iterrows(): 
-            # Dibujar los segmentos en el orden deseado
-            linea = folium.PolyLine(
-                locations=[(row.LATITUD,row.LONGITUD), (row.LATITUD2,row.LONGITUD2)],
-                color="black",
-                weight=1.5,
-                opacity=1
-            )
-            popup = folium.Popup(f"Tramo de linea \n Material conductor: {row.MATERIALCONDUCTOR} \n Tipo conductor: {row.TIPOCONDUCTOR} \n Largo: {row.LENGTH} \n Calibre conductor: {row.CALIBRECONDUCTOR} \n Guarda conductor:{row.GUARDACONDUCTOR} \n Neutro conductor:{row.NEUTROCONDUCTOR} \n Calibre neutro:{row.CALIBRENEUTRO} \n Capacidad: {row.CAPACITY} \n Resistencia: {row.RESISTANCE} \n Acometida conductor: {row.ACOMETIDACONDUCTOR}")
-            linea.add_child(popup)
-
-            # Añadir la polyline al mapa
-            linea.add_to(mapa)
         
         riesgo_valores = {'Alto': 3, 'Medio': 2, 'Bajo': 1}
 
