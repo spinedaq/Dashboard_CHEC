@@ -17,7 +17,7 @@ def load_data():
 
     eventos_tramo_linea = pd.read_pickle("C:/Users/lucas/OneDrive - Universidad Nacional de Colombia/PC-GCPDS/Documentos/data/Eventos_tramo_linea.pkl")
 
-    eventos_transformador = pd.read_pickle("C:/Users/lucas/OneDrive - Universidad Nacional de Colombia/PC-GCPDS/Documentos/data/Eventos_transfromador.pkl")
+    eventos_transformador = pd.read_pickle("C:/Users/lucas/OneDrive - Universidad Nacional de Colombia/PC-GCPDS/Documentos/data/Eventos_transformador.pkl")
 
     return eventos_interruptor, eventos_tramo_linea, eventos_transformador
 
