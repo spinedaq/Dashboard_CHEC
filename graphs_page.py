@@ -443,6 +443,7 @@ def select_subcriteria_1(selection_sub_criteria_1):
                                                 selection_criteria[1][1] = selection_sub_criteria_1
                                                 options_dates =  sorted(data_total[0][selection_sub_criteria_1].unique())
                                                 options_dates = [date.strftime('%Y-%m-%d') for date in options_dates]
+                                                options_dates = list(sorted(set(options_dates)))
                                         
                                                 div = [ html.Div('Desde:',className='sub-criteria-1-1-filter-text',
                                                                 style={
@@ -666,6 +667,7 @@ def select_subcriteria_1(selection_sub_criteria_1):
                                                 selection_criteria[1][1] = selection_sub_criteria_1
                                                 options_dates =  sorted(data_total[1][selection_sub_criteria_1].unique())
                                                 options_dates = [date.strftime('%Y-%m-%d') for date in options_dates]
+                                                options_dates = list(sorted(set(options_dates)))
                                         
                                                 div = [ html.Div('Desde:',className='sub-criteria-1-1-filter-text',
                                                                 style={
@@ -889,6 +891,7 @@ def select_subcriteria_1(selection_sub_criteria_1):
                                                 selection_criteria[1][1] = selection_sub_criteria_1
                                                 options_dates =  sorted(data_total[2][selection_sub_criteria_1].unique())
                                                 options_dates = [date.strftime('%Y-%m-%d') for date in options_dates]
+                                                options_dates = list(sorted(set(options_dates)))
                                         
                                                 div = [ html.Div('Desde:',className='sub-criteria-1-1-filter-text',
                                                                 style={
@@ -1140,6 +1143,7 @@ def select_subcriteria_2(selection_sub_criteria_2):
                                                 selection_criteria[2][1] = selection_sub_criteria_2
                                                 options_dates =  sorted(data_total[0][selection_sub_criteria_2].unique())
                                                 options_dates = [date.strftime('%Y-%m-%d') for date in options_dates]
+                                                options_dates = list(sorted(set(options_dates)))
                                         
                                                 div = [ html.Div('Desde:',className='sub-criteria-2-1-filter-text',
                                                                 style={
@@ -1363,6 +1367,7 @@ def select_subcriteria_2(selection_sub_criteria_2):
                                                 selection_criteria[2][1] = selection_sub_criteria_2
                                                 options_dates =  sorted(data_total[1][selection_sub_criteria_2].unique())
                                                 options_dates = [date.strftime('%Y-%m-%d') for date in options_dates]
+                                                options_dates = list(sorted(set(options_dates)))
                                         
                                                 div = [ html.Div('Desde:',className='sub-criteria-2-1-filter-text',
                                                                 style={
@@ -1586,6 +1591,7 @@ def select_subcriteria_2(selection_sub_criteria_2):
                                                 selection_criteria[2][1] = selection_sub_criteria_2
                                                 options_dates =  sorted(data_total[2][selection_sub_criteria_2].unique())
                                                 options_dates = [date.strftime('%Y-%m-%d') for date in options_dates]
+                                                options_dates = list(sorted(set(options_dates)))
                                         
                                                 div = [ html.Div('Desde:',className='sub-criteria-2-1-filter-text',
                                                                 style={
@@ -1837,6 +1843,7 @@ def select_subcriteria_3(selection_sub_criteria_3):
                                                 selection_criteria[3][1] = selection_sub_criteria_3
                                                 options_dates =  sorted(data_total[0][selection_sub_criteria_3].unique())
                                                 options_dates = [date.strftime('%Y-%m-%d') for date in options_dates]
+                                                options_dates = list(sorted(set(options_dates)))
                                         
                                                 div = [ html.Div('Desde:',className='sub-criteria-3-1-filter-text',
                                                                 style={
@@ -2060,6 +2067,7 @@ def select_subcriteria_3(selection_sub_criteria_3):
                                                 selection_criteria[3][1] = selection_sub_criteria_3
                                                 options_dates =  sorted(data_total[1][selection_sub_criteria_3].unique())
                                                 options_dates = [date.strftime('%Y-%m-%d') for date in options_dates]
+                                                options_dates = list(sorted(set(options_dates)))
                                         
                                                 div = [ html.Div('Desde:',className='sub-criteria-3-1-filter-text',
                                                                 style={
@@ -2283,6 +2291,7 @@ def select_subcriteria_3(selection_sub_criteria_3):
                                                 selection_criteria[3][1] = selection_sub_criteria_3
                                                 options_dates =  sorted(data_total[2][selection_sub_criteria_3].unique())
                                                 options_dates = [date.strftime('%Y-%m-%d') for date in options_dates]
+                                                options_dates = list(sorted(set(options_dates)))
                                         
                                                 div = [ html.Div('Desde:',className='sub-criteria-3-1-filter-text',
                                                                 style={
@@ -2534,6 +2543,7 @@ def select_subcriteria_4(selection_sub_criteria_4):
                                                 selection_criteria[4][1] = selection_sub_criteria_4
                                                 options_dates =  sorted(data_total[0][selection_sub_criteria_4].unique())
                                                 options_dates = [date.strftime('%Y-%m-%d') for date in options_dates]
+                                                options_dates = list(sorted(set(options_dates)))
                                         
                                                 div = [ html.Div('Desde:',className='sub-criteria-4-1-filter-text',
                                                                 style={
@@ -2757,6 +2767,7 @@ def select_subcriteria_4(selection_sub_criteria_4):
                                                 selection_criteria[4][1] = selection_sub_criteria_4
                                                 options_dates =  sorted(data_total[1][selection_sub_criteria_4].unique())
                                                 options_dates = [date.strftime('%Y-%m-%d') for date in options_dates]
+                                                options_dates = list(sorted(set(options_dates)))
                                         
                                                 div = [ html.Div('Desde:',className='sub-criteria-4-1-filter-text',
                                                                 style={
@@ -2980,6 +2991,7 @@ def select_subcriteria_4(selection_sub_criteria_4):
                                                 selection_criteria[4][1] = selection_sub_criteria_4
                                                 options_dates =  sorted(data_total[2][selection_sub_criteria_4].unique())
                                                 options_dates = [date.strftime('%Y-%m-%d') for date in options_dates]
+                                                options_dates = list(sorted(set(options_dates)))
                                         
                                                 div = [ html.Div('Desde:',className='sub-criteria-4-1-filter-text',
                                                                 style={

@@ -123,7 +123,7 @@ def work_space():
                                 'position': 'relative',
                                 'height': '6vh',
                                 'align-items': 'center',
-                                'margin': '0 0 0 0',
+                                'margin': '-1vh 0 0 0',
                             }
                             ,children=[
                                 html.Div(className="map-icon",style={
@@ -149,7 +149,7 @@ def work_space():
                                 'width': '97.6%',
                                 'borderColor': 'white',
                                 'borderRadius': '9px',
-                                'height': '59vh',
+                                'height': '60vh',
                                 'margin': '1vh 0px 0px 1.2%',
                                 
                             }),
